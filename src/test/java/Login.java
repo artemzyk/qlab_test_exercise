@@ -2,6 +2,7 @@ import PageObjects.MailBoxPage;
 import PageObjects.MainPage;
 import org.testng.Assert;
 import org.testng.annotations.*;
+
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Condition.*;
 public class Login {
@@ -15,8 +16,11 @@ public class Login {
     }
 
     @BeforeClass
-    public void beforeClass() {
-        Utils.createNewDriver(Utils.Browsers.CHROME);
+    @Parameters("browser")
+    public void beforeClass(String browser) {
+
+        Utils.createNewRemoteDriver(browser);
+
     }
 
     @BeforeMethod

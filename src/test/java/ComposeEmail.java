@@ -17,8 +17,9 @@ public class ComposeEmail {
     }
 
     @BeforeClass
-    public void beforeClass() {
-        Utils.createNewDriver(Utils.Browsers.CHROME);
+    @Parameters("browser")
+    public void beforeClass(String browser) {
+        Utils.createNewRemoteDriver(browser);
         Utils.signIn();
     }
 

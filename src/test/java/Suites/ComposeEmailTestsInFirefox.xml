@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ComposeEmailSuite" verbose="2">
+    <test name="Run ComposeEmail tests in firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="ComposeEmail" />
+        </classes>
+    </test>
+</suite>

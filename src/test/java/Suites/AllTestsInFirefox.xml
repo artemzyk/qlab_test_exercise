@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AllTestsInFirefox" verbose="2">
+    <suite-files>
+        <suite-file path="./LoginTestsInFirefox.xml"/>
+        <suite-file path="./ComposeEmailTestsInFirefox.xml"/>
+    </suite-files>
+</suite>

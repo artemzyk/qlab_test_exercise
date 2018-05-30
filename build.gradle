@@ -35,19 +35,32 @@ allure {
     allureJavaVersion = '2.6.0'
 }
 
-task runLoginSuite (type:Test) {
+task runLoginSuiteInChrome (type:Test) {
     useTestNG() {
-        suites 'src/test/java/Suites/LoginTests.xml'
+        suites 'src/test/java/Suites/LoginTestsInChrome.xml'
     }
 }
-task runComposeEmailSuite (type:Test) {
+
+task runLoginSuiteInFirefox (type:Test) {
     useTestNG() {
-        suites 'src/test/java/Suites/ComposeEmailTests.xml'
+        suites 'src/test/java/Suites/LoginTestsInFirefox.xml'
+    }
+}
+
+task runComposeEmailSuiteInChrome (type:Test) {
+    useTestNG() {
+        suites 'src/test/java/Suites/ComposeEmailTestsInChrome.xml'
+    }
+}
+
+task runComposeEmailSuiteInFirefox (type:Test) {
+    useTestNG() {
+        suites 'src/test/java/Suites/ComposeEmailTestsInFirefox.xml'
     }
 }
 
 test {
     useTestNG() {
-        suites 'src/test/java/Suites/AllTests.xml'
+        suites 'src/test/java/Suites/AllTestsInChrome.xml'
     }
 }
