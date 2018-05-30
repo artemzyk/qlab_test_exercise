@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AllTests" verbose="2">
+    <suite-files>
+        <suite-file path="./LoginTests.xml"/>
+        <suite-file path="./ComposeEmailTests.xml"/>
+    </suite-files>
+</suite>

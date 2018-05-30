@@ -40,3 +40,14 @@ task runLoginSuite (type:Test) {
         suites 'src/test/java/Suites/LoginTests.xml'
     }
 }
+task runComposeEmailSuite (type:Test) {
+    useTestNG() {
+        suites 'src/test/java/Suites/ComposeEmailTests.xml'
+    }
+}
+
+test {
+    useTestNG() {
+        suites 'src/test/java/Suites/AllTests.xml'
+    }
+}
